@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import ReactDOM from 'react-dom'; //librerá para poder renderizar react en el navegador
+import './styles-css/main.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

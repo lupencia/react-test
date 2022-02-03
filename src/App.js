@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React from 'react';
+import img from './assets/instagram-1.png';
+import Description from './Description.js';
+import Avatar from './Avatar.js';
+
+const Title = () => {
+  return <h1>Hola mundo</h1>
+}
+
+
+const Date = () => {
+  return '10/4/2022';
+}
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Title/>
+      <Avatar borderRadius = '50%'
+              width= '70px'
+              height = '70px'
+              ttle = 'mi primer avatar'
+              src = {img}/>
+      <section className="item-container">
+        <img src={img} className="image" alt="personal" />
+        <Description color='blue' message='Estamos trabajando'/>
+        <Description color='purple' message='Een un curso de aprendizaje de react'/>
+        <Description color='green' message='el cual me va a salir bien'/>
+        <Description color='red' message='porque soy válida, nteligente, lista'/>
+        <span className="valgo la pena">
+          <Date/>
+        </span>
+      </section>
+    </React.Fragment>
   );
 }
 
